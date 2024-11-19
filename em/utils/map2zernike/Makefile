@@ -19,7 +19,7 @@ map2zernike:	main.cpp
 	cd gzstream; make
 	mkdir -p $(BIN_DIR)
 	$(CXX)         main.cpp -o $(BIN_DIR)/map2zernike $(OPTIM) $(XFLAGS) $(LFLAGS) 
-	$(CXX) -g -pg  main.cpp -o $(BIN_DIR)/map2zernike_debug $(XFLAGS) $(LFLAGS) 
+	$(CXX) -g   main.cpp -o $(BIN_DIR)/map2zernike_debug $(XFLAGS) $(LFLAGS)  # -pg 
 
 clean:
 	rm -f $(OBJ_FILES)
