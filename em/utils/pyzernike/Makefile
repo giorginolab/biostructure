@@ -1,3 +1,7 @@
+# This makefile doesn't seem to work.
+# what works is CXX=g++-14 python setup.py build_ext --inplace
+
+
 PYTHON_DIR =   #  /home/manzumbado/miniconda3/envs/visual/include/python3.6m/ 
 CXX = g++
 CFLAGS = -std=c++11 -fpic  $(shell python3-config --includes) $(shell numpy-config --cflags)
@@ -18,4 +22,4 @@ $(OBJ) :
 	
 	
 clean :
-	rm -vf $(OBJ)zernike_wrap.o zernike.py
+	rm -vf $(OBJ) *.so zernike_wrap.o zernike.py

@@ -15,8 +15,8 @@ except AttributeError:
 
 # view extension module
 _zernike = Extension("_zernike",
-                   ["zernike.i","Grid.hpp", "util.hpp", "ZernikeDescriptor.hpp"],
-                   include_dirs = [numpy_include, "../map2zernike/"]
+                   sources = ["zernike.cpp", "zernike_wrap.cpp"],
+                   include_dirs = [numpy_include, ".", "../map2zernike/"]
                    )
 
 # NumyTypemapTests setup
@@ -24,5 +24,5 @@ setup(  name        = "zernike module",
         description = "zernike provides a function: computeDescriptors()",
         author      = "Manuel Zumbado",
         version     = "1.0",
-        ext_modules = []
+        ext_modules = [_zernike],
         )
