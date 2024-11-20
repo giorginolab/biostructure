@@ -1,9 +1,9 @@
 #ifndef ZERNIKE_H
 #define ZERNIKE_H
 
-#include "../map2zernike/Grid.h"
-#include "../map2zernike/ZernikeDescriptor.h"
-#include "../map2zernike/util.h"
+#include "Grid.h"
+#include "ZernikeDescriptor.h"
+#include "util.h"
 #include <stdexcept>
 
 
